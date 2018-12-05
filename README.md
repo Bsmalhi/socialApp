@@ -1,5 +1,5 @@
 # socialApp
-##Spring Boot Project Socializing App
+## Spring Boot Project Socializing App
 ### In Progress
 
 
