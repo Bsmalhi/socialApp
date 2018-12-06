@@ -9,8 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/")
 public class WelcomeController {
 
-    @RequestMapping(value = {"/", "/homepage"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/"}, method = RequestMethod.GET)
     public String welcomePage(){
         return "welcomePageNotSignedIn";
+    }
+
+    @RequestMapping(value = {"/home"}, method = RequestMethod.GET)
+    public String welcomePage2(){
+        return "welcomePage";
     }
 }
