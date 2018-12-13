@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: "mysql-ohio-instance1.cp1zsu6o5jlw.us-east-2.rds.amazonaws.com"
+    username: "administrator"
+    password: "Cha12345"
+    driver-class-name: "com.mysql.jdbc.Driver"
+
+  thymeleaf:
+    cache: false
+
+server:
+  port: 8008
