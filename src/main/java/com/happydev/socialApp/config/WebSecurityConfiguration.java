@@ -1,10 +1,13 @@
 package com.happydev.socialApp.config;
 
+import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth2Sso;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
+@EnableOAuth2Sso
+@Configuration
 public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
-
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
@@ -13,8 +16,26 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatcher("/**")
                 .authorizeRequests()
                 .antMatchers("/", "/welcomepage")
-                    .permitAll()
+                .permitAll()
                 .anyRequest()
                 .authenticated();
     }
 }
+
+//@Configuration
+//@EnableOAuth2Sso
+//public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
+//
+//    @Override
+//    protected void configure(HttpSecurity http) throws Exception {
+//        http
+//                .csrf()
+//                    .disable()
+//                .antMatcher("/**")
+//                .authorizeRequests()
+//                .antMatchers("/", "/welcomepage")
+//                    .permitAll()
+//                .anyRequest()
+//                .authenticated();
+//    }
+//}

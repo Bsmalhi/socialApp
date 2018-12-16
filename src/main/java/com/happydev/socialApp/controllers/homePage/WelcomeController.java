@@ -17,4 +17,9 @@ public class WelcomeController {
     public String welcomePage2(){
         return "welcomePage";
     }
+    @RequestMapping(value = "/about", method = RequestMethod.GET)
+    public String AboutPage(){
+        return "Under development About page. Releasing Soon!";
+    }
+
 }
