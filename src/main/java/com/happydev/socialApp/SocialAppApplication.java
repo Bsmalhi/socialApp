@@ -17,10 +17,10 @@ public class SocialAppApplication {
 
 	public static void main(String[] args) {
 
-	   ApplicationContext context = SpringApplication.run(SocialAppApplication.class, args);
-		System.out.println(yamlConfig.getName());
-		System.out.println(yamlConfig.getProfile());
-		System.out.println(yamlConfig.getPort());
+	   SpringApplication.run(SocialAppApplication.class, args);
+//		System.out.println(yamlConfig.getName());
+//		System.out.println(yamlConfig.getProfile());
+//		System.out.println(yamlConfig.getPort());
 
 	}
 }
